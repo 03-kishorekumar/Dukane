@@ -1,0 +1,138 @@
+.auth-container {
+  min-height: 100vh;
+  background: #eef4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.auth-card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.brand-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.brand-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: #2563eb;
+}
+
+.tab.inactive {
+  background: transparent;
+  color: #6b7280;
+}
+
+/* Role */
+.register-as {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.role-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role-box {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.role-box span {
+  display: block;
+  margin-top: 6px;
+}
+
+.role-box.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  font-size: 13px;
+  margin: 8px 0 4px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #2563eb;
+}
+
+.otp-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.otp-btn:hover {
+  background: #2563eb;
+}
+
+/* Terms */
+.terms-text {
+  margin-top: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.terms-text span {
+  color: #2563eb;
+  cursor: pointer;
+}
