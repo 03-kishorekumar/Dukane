@@ -1,0 +1,300 @@
+/* auth.css - Matching myorker.com UI */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #dbe4f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px 16px;
+}
+
+/* Brand Header */
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.brand-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.brand-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+/* Auth Card */
+.auth-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 28px;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.tab.inactive {
+  color: #6b7280;
+  background: transparent;
+}
+
+.tab.inactive:hover {
+  color: #374151;
+  background: #e9eaeb;
+  border-color: transparent;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+/* Register As */
+.register-as {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* Role Selector */
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.role-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  user-select: none;
+}
+
+.role-box:hover {
+  border-color: #93c5fd;
+  background: #f0f7ff;
+}
+
+.role-box.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.role-box svg,
+.role-icon {
+  width: 28px;
+  height: 28px;
+  color: #374151;
+}
+
+.role-box.selected svg,
+.role-box.selected .role-icon {
+  color: #2563eb;
+}
+
+.role-box span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.role-box.selected span {
+  color: #2563eb;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group label span.required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #1f2937;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+.input-wrapper input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* OTP Button */
+.otp-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 4px;
+  font-family: inherit;
+}
+
+.otp-btn:hover {
+  background: #1d4ed8;
+  border-color: transparent;
+}
+
+.otp-btn:active {
+  transform: scale(0.99);
+}
+
+/* Terms */
+.terms-text {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.terms-text a,
+.terms-text span.link {
+  color: #2563eb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.terms-text a:hover,
+.terms-text span.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 20px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+  }
+}
+
+.error-text {
+  font-size: 13px;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: -4px;
+}
